@@ -4,10 +4,10 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import WidgetDisplay  from '../WidgetDisplay'
-import { fetchAllWidgets } from '../../lib/apiConnect'
+import { fetchAllWidgets, Widget } from '../../lib/apiConnect'
 
-const WidgetList = () => {
-  const [widgets, setWidgets] = useState([])
+const WidgetList = (): JSX.Element => {
+  const [widgets, setWidgets] = useState<Widget[]>([])
 
   useEffect(() => {
     fetchAllWidgets()
